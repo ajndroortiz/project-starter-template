@@ -1,0 +1,15 @@
+.site-footer {
+    background-color: $site-color;
+    color: $white;
+    display: flex;
+    padding: $paddingtopbottom;
+    justify-content: center;
+
+    &__menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+}

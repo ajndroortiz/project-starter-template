@@ -1,0 +1,36 @@
+// Common Colors
+$white: #fff;
+$black: #000;
+$red: #f00;
+$green: #0f0;
+$blue: #00f;
+$yellow: #ff0;
+$pink: #ffc0cb;
+$grey: #888;
+$darkgrey: #666;
+$offblack: #333;
+
+// Social Colors
+$facebook: #3b5998;
+$twitter: #00aced;
+$google: #dd4b39;
+$youtube: #b00;
+
+// Site specific
+$site-color: #2e5fc6;
+$link-color: lighten($site-color, 5%);
+$body-bg: #eaeaea;
+$caption-border: #ccc;
+$blockquote-color: darken($site-color, 3%);
+$home-article-title-bg: rgba($black, .3);
+
+// WP Related
+$wpcaptionborder: #f0f0f0;
+$screenreadertext: #21759b;
+// Sizes
+$wrapperwidth: 1232px;
+$paddingleftright: 0 16px;
+$paddingtopbottom: 16px 0;
+$pagesectionmargintop: 16px;
+$margin: 8px;
+$padding: 8px;
