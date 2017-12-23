@@ -1,39 +1,39 @@
 .site-header {
-    align-items: center;
-    background-color: $site-color;
+  align-items: center;
+  background-color: $site-color;
+  color: text-contrast($site-color);
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+
+  @include breakpoint(513px) {
+    flex-direction: row;
+  }
+
+  &__title {
     color: text-contrast($site-color);
-    display: flex;
-    flex-direction: column;
-    padding: $padding;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav {
+    width: 100%;
 
     @include breakpoint(513px) {
-        flex-direction: row;
+      margin-left: auto;
+      flex-basis: 30%;
     }
 
-    &__title {
-        color: text-contrast($site-color);
-        margin: 0;
-        padding: 0;
+    a {
+      color: text-contrast($site-color);
+      border-bottom: 1px dotted text-contrast($site-color);
     }
+  }
 
-    &__nav {
-        width: 100%;
-
-        @include breakpoint(513px) {
-            margin-left: auto;
-            flex-basis: 30%;
-        }
-
-        a {
-            color: text-contrast($site-color);
-            border-bottom: 1px dotted text-contrast($site-color);
-        }
-    }
-
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-    }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
 }
