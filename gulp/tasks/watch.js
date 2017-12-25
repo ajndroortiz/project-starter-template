@@ -4,7 +4,9 @@ const browserSync = require('browser-sync').create();
 gulp.task('watch', () => {
   browserSync.init({
     notify: false,
-    proxy: 'http://zitroxela-media-inc.dev'
+    server: {
+      baseDir: 'build'
+    }
   });
 
   gulp.watch('./src/content/**/*', () => {

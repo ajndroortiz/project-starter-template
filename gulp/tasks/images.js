@@ -8,5 +8,5 @@ gulp.task('images', () => {
       interlaced: true,
       multipass: true
     }))
-    .pipe(gulp.dest('./../imgs/'));
+    .pipe(gulp.dest('./build/imgs/'));
 });
