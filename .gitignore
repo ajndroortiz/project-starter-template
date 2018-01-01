@@ -216,6 +216,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Project Specific
-build

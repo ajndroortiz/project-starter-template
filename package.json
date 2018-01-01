@@ -10,23 +10,23 @@
   "author": "Alejandro <ajndro.ortiz@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^7.2.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.1",
     "copy-webpack-plugin": "^4.2.3",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^4.0.0",
-    "gulp-postcss": "^7.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
     "postcss-contrast": "0.0.4",
     "sanitize.scss": "^1.0.0",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.5"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
