@@ -4,7 +4,7 @@
   color: text-contrast(map-get($map: $colors, $key: site-color));
   display: flex;
   flex-direction: column;
-  padding: map-get($map: $sizes, $key: topandbottom);
+  padding: map-get($map: $sizes, $key: spacing) * 2;
 
   @include breakpoint(513px) {
     flex-direction: row;
