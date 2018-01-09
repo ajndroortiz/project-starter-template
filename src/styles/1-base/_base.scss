@@ -7,3 +7,11 @@ a {
     border-bottom: 1px dotted map-get($map: $colors, $key: red);
   }
 }
+
+blockquote {
+    border-left: 1px solid map-get($colors, site-color);
+    padding-left: 1em;
+    font-style: italic;
+    margin: 0 auto 1.5rem auto;
+    width: 80%;
+}
