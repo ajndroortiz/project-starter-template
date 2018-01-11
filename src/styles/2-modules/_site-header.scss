@@ -4,7 +4,7 @@
   color: text-contrast($site-color);
   display: flex;
   flex-direction: column;
-  padding: $padding;
+  padding: $padding * 2;
 
   @include breakpoint(513px) {
     flex-direction: row;
