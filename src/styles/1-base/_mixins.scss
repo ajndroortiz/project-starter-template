@@ -14,7 +14,7 @@ $max-width: 1232px;
     @return $black;
     // Lighter backgorund, return dark color
   } @else {
-    @return $white;
+    @return map-get($map: $colors, $key: white);
     // Darker background, return light color
   }
 }

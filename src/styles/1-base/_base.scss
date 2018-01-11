@@ -1,17 +1,25 @@
 a {
   text-decoration: none;
-  color: $site-color;
-  border-bottom: 1px dotted $site-color;
+  color: $link-color;
+  border-bottom: 1px dotted $link-color;
   @include breakpoint(500px) {
-    color: red;
-    border-bottom: 1px dotted red;
+    color: map-get($map: $colors, $key: red);
+    border-bottom: 1px dotted map-get($map: $colors, $key: red);
   }
 }
 
 blockquote {
+<<<<<<< HEAD
   padding-left: 10px;
   border-left: 4px solid $blockquote-color;
   font-style: italic;
   width: 80%;
   margin: 0 auto 1.5rem;
+=======
+    border-left: 1px solid map-get($colors, site-color);
+    padding-left: 1em;
+    font-style: italic;
+    margin: 0 auto 1.5rem auto;
+    width: 80%;
+>>>>>>> 16ebebe152c8bc051ed4089ac8a255cebcc0a22a
 }
