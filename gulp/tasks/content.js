@@ -1,6 +1,7 @@
-const gulp = require('gulp');
+const gulp     = require('gulp');
+const settings = require('./../../settings');
 
 gulp.task('content', () => {
-  return gulp.src('./src/content/**/*')
-    .pipe(gulp.dest('./../'));
+  return gulp.src(settings.contentFiles + '**/*')
+    .pipe(gulp.dest(settings.outputFolder));
 });

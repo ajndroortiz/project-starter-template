@@ -1,10 +1,17 @@
 a {
   text-decoration: none;
-  color: $site-color;
-  border-bottom: 1px dotted $site-color;
-
+  color: $link-color;
+  border-bottom: 1px dotted $link-color;
   @include breakpoint(500px) {
-    color: red;
-    border-bottom: 1px dotted red;
+    color: map-get($map: $colors, $key: red);
+    border-bottom: 1px dotted map-get($map: $colors, $key: red);
   }
+}
+
+blockquote {
+  padding-left: 10px;
+  border-left: 4px solid $blockquote-color;
+  font-style: italic;
+  width: 80%;
+  margin: 0 auto 1.5rem;
 }

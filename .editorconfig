@@ -6,7 +6,7 @@ insert_final_newline = true
 charset = utf-8
 indent_style = space
 
-[*.{js,scss,css,py,yml}]
+[*.{scss,css,py,yml}]
 indent_size = 2
 
 [*.{php,html}]

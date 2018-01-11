@@ -1,21 +1,24 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync').create();
+const settings    = require('./../../settings');
 
-gulp.task('watch', () => {
+gulp.task('watch', ['content', 'styles', 'scripts'], () => {
   browserSync.init({
     notify: false,
-    proxy: 'http://zitroxela-media-inc.dev'
+    server: {
+      baseDir: settings.outputFolder
+    }
   });
 
-  gulp.watch('./src/content/**/*', () => {
+  gulp.watch(settings.contentFiles + '**/*', () => {
     gulp.start('contentMove');
   });
 
-  gulp.watch('./src/js/**/*.js', () => {
+  gulp.watch(settings.scriptFiles + '**/*.js', () => {
     gulp.start('jsInject');
   });
 
-  gulp.watch('./src/styles/**/*', () => {
+  gulp.watch(settings.stylingFiles + '**/*', () => {
     gulp.start('styleInject');
   });
 
@@ -24,7 +27,7 @@ gulp.task('watch', () => {
   });
 
   gulp.task('styleInject', ['styles'], () => {
-    return gulp.src('./../style.css')
+    return gulp.src(settings.outputFolder + 'style.css')
       .pipe(browserSync.stream());
   });
 
