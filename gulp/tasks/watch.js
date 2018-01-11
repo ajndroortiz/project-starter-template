@@ -2,7 +2,7 @@ const gulp        = require('gulp');
 const browserSync = require('browser-sync').create();
 const settings    = require('./../../settings');
 
-gulp.task('watch', ['contentMove', 'styleInject', 'jsInject'], () => {
+gulp.task('watch', ['content', 'styles', 'scripts'], () => {
   browserSync.init({
     notify: false,
     server: {

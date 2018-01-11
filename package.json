@@ -6,11 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --output-public-path=/build/js/",
-<<<<<<< HEAD
-    "watch": "gulp watch"
-=======
     "dev": "gulp watch"
->>>>>>> 16ebebe152c8bc051ed4089ac8a255cebcc0a22a
   },
   "author": "Alejandro <ajndro.ortiz@gmail.com>",
   "license": "ISC",
@@ -22,11 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "breakpoint-sass": "^2.7.1",
-<<<<<<< HEAD
     "browser-sync": "^2.23.5",
-=======
-    "browser-sync": "^2.23.3",
->>>>>>> 16ebebe152c8bc051ed4089ac8a255cebcc0a22a
     "copy-webpack-plugin": "^4.3.1",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
@@ -36,10 +28,6 @@
     "postcss-contrast": "0.0.4",
     "sanitize.scss": "^1.0.0",
     "webpack": "^3.10.0",
-<<<<<<< HEAD
     "webpack-dev-server": "^2.10.1"
-=======
-    "webpack-dev-server": "^2.10.0"
->>>>>>> 16ebebe152c8bc051ed4089ac8a255cebcc0a22a
   }
 }
