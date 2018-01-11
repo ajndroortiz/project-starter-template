@@ -10,7 +10,6 @@
             <p>&copy; Zitroxela Media Inc. 2017</p>
         </footer>
 
-        <script src="./build/js/app.bundle.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>

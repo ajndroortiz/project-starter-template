@@ -1,9 +1,10 @@
 a {
-    text-decoration: none;
-    color: $site-color;
-    border-bottom: 1px dotted $site-color;
-    @include breakpoint(500px) {
-        color: red;
-        border-bottom: 1px dotted red;
-    }
+  text-decoration: none;
+  color: $site-color;
+  border-bottom: 1px dotted $site-color;
+
+  @include breakpoint(500px) {
+    color: red;
+    border-bottom: 1px dotted red;
+  }
 }
