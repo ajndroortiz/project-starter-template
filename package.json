@@ -1,7 +1,7 @@
 {
-  "name": "webpack-babel-starter",
+  "name": "project-starter-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Starter package for development projects",
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack",

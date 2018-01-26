@@ -11,7 +11,7 @@ $max-width: 1232px;
 // Function to adjust text color to contrast designated color
 @function text-contrast($color) {
   @if lightness($color) > 50 {
-    @return $black;
+    @return map-get($map: $colors, $key: black);
     // Lighter backgorund, return dark color
   } @else {
     @return map-get($map: $colors, $key: white);

@@ -21,7 +21,11 @@
 
     @include breakpoint(513px) {
       margin-left: auto;
-      flex-basis: 30%;
+      flex-basis: 50%;
+    }
+
+    @include breakpoint(670px) {
+      flex-basis: 40%;
     }
 
     a {
