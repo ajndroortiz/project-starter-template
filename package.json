@@ -18,7 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.23.3",
+    "browser-sync": "^2.23.5",
     "copy-webpack-plugin": "^4.3.1",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
@@ -28,6 +28,6 @@
     "postcss-contrast": "0.0.4",
     "sanitize.scss": "^1.0.0",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.10.0"
+    "webpack-dev-server": "^2.10.1"
   }
 }

@@ -18,4 +18,9 @@
     display: flex;
     justify-content: space-around;
   }
+  
+  a {
+    color: text-contrast(map-get($map: $colors, $key: site-color));
+    border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
+  }
 }

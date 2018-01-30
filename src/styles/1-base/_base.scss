@@ -20,9 +20,9 @@ a {
 }
 
 blockquote {
-    border-left: 1px solid map-get($colors, site-color);
-    padding-left: 1em;
-    font-style: italic;
-    margin: 0 auto 1.5rem auto;
-    width: 80%;
+  padding-left: 10px;
+  border-left: 4px solid $blockquote-color;
+  font-style: italic;
+  width: 80%;
+  margin: 0 auto 1.5rem;
 }
