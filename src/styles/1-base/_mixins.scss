@@ -1,75 +1,61 @@
 $base-font-size: 16px;
 $gutter: 16px;
 $max-width: 1232px;
-
 // Mixin to set max width and center on page
 @mixin center-wrap() {
-  max-width: $max-width;
-  margin: 0 auto;
+    max-width: $max-width;
+    margin: 0 auto;
 }
-
 // Function to adjust text color to contrast designated color
 @function text-contrast($color) {
-  @if lightness($color) > 50 {
-    @return map-get($map: $colors, $key: black);
-    // Lighter backgorund, return dark color
-  } @else {
-    @return map-get($map: $colors, $key: white);
-    // Darker background, return light color
-  }
+    @if lightness($color) > 50 {
+        @return map-get($map: $colors, $key: black);
+        // Lighter backgorund, return dark color
+    } @else {
+        @return map-get($map: $colors, $key: white);
+        // Darker background, return light color
+    }
 }
-
 // Rem calc mixin written as @include rem-fallback(padding, 1,1,1,1); where the number is the amount times rem.
 @function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+    @return $num / ($num * 0 + 1);
 }
-
 @mixin rem-fallback($property, $values...) {
-  $max: length($values);
-  $px-values: '';
-  $rem-values: '';
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $px-values: #{$px-values + $value * 16}px;
-
-    @if $i < $max {
-      $px-values: #{$px-values + " "};
+    $max: length($values);
+    $px-values: '';
+    $rem-values: '';
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $px-values: #{$px-values + $value * 16}px;
+        @if $i < $max {
+            $px-values: #{$px-values + " "};
+        }
     }
-  }
-
-  @for $i from 1 through $max {
-    $value: strip-unit(nth($values, $i));
-    $rem-values: #{$rem-values + $value}rem;
-
-    @if $i < $max {
-      $rem-values: #{$rem-values + " "};
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $rem-values: #{$rem-values + $value}rem;
+        @if $i < $max {
+            $rem-values: #{$rem-values + " "};
+        }
     }
-  }
-
-  #{$property}: $px-values;
-  #{$property}: $rem-values;
+    #{$property}: $px-values;
+    #{$property}: $rem-values;
 }
-
 // Convert Pixel size to Rem Unit
 @function px-to-rem($target, $context: $base-font-size) {
-  @return ($target / $context) * 1rem;
+    @return ($target / $context) * 1rem;
 }
-
 // Convert Pixel size to EM Unit
 @function px-to-em($target, $context: $base-font-size) {
-  @return ($target / $context) * 1em;
+    @return ($target / $context) * 1em;
 }
-
 // Convert px to percentage of width
 @function px-to-pc($target, $context: $max-width) {
-  @return ($target / $context) * 100%;
+    @return ($target / $context) * 100%;
 }
-
 // Calculates width percentage value to needed to place $items per line
 @function per-line($items) {
-  $g-pct: px-to-pc($gutter) * 2;
-  $g-total: $items * $g-pct;
-
-  @return 100% / $items - $g-total;
+    $g-pct: px-to-pc($gutter) * 2;
+    $g-total: $items * $g-pct;
+    @return 100% / $items - $g-total;
 }
