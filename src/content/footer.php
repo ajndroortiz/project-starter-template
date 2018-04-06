@@ -7,7 +7,7 @@
                     <li><a href="#">Footer Item 4</a></li>
                 </ul>
             </nav>
-            <p>&copy; Zitroxela Media Inc. 2017</p>
+            <p>&copy; Zitroxela Media Inc. 2018</p>
         </footer>
 
         <?php wp_footer(); ?>

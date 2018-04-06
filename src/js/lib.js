@@ -4,6 +4,6 @@ export const person = {
     age: 35
 };
 
-export function sayHello(name) {
+export function sayHello( name ) {
     return `Hello ${name}`;
 }
