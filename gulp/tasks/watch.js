@@ -1,37 +1,37 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync').create();
-const settings    = require('./../../settings');
+const gulp        = require( 'gulp' );
+const browserSync = require( 'browser-sync' ).create();
+const settings    = require( './../../settings' );
 
-gulp.task('watch', ['content', 'styles', 'scripts'], () => {
-  browserSync.init({
-    notify: false,
-    server: {
-      baseDir: settings.outputFolder
-    }
-  });
+gulp.task( 'watch', ['content', 'styles', 'scripts'], () => {
+    browserSync.init( {
+        notify: false,
+        server: {
+            baseDir: settings.outputFolder
+        }
+    } );
 
-  gulp.watch(settings.contentFiles + '**/*', () => {
-    gulp.start('contentMove');
-  });
+    gulp.watch( settings.contentFiles + '**/*', () => {
+        gulp.start( 'contentMove' );
+    } );
 
-  gulp.watch(settings.scriptFiles + '**/*.js', () => {
-    gulp.start('jsInject');
-  });
+    gulp.watch( settings.scriptFiles + '**/*.js', () => {
+        gulp.start( 'jsInject' );
+    } );
 
-  gulp.watch(settings.stylingFiles + '**/*', () => {
-    gulp.start('styleInject');
-  });
+    gulp.watch( settings.stylingFiles + '**/*', () => {
+        gulp.start( 'styleInject' );
+    } );
 
-  gulp.task('contentMove', ['content'], () => {
-    browserSync.reload();
-  });
+    gulp.task( 'contentMove', ['content'], () => {
+        browserSync.reload();
+    } );
 
-  gulp.task('styleInject', ['styles'], () => {
-    return gulp.src(settings.outputFolder + 'style.css')
-      .pipe(browserSync.stream());
-  });
+    gulp.task( 'styleInject', ['styles'], () => {
+        return gulp.src( settings.outputFolder + 'style.css' )
+            .pipe( browserSync.stream() );
+    } );
 
-  gulp.task('jsInject', ['scripts'], () => {
-    browserSync.reload();
-  });
-});
+    gulp.task( 'jsInject', ['scripts'], () => {
+        browserSync.reload();
+    } );
+} );

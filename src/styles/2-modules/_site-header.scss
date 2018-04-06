@@ -1,43 +1,41 @@
 .site-header {
-  align-items: center;
-  background-color: map-get($map: $colors, $key: site-color);
-  color: text-contrast(map-get($map: $colors, $key: site-color));
-  display: flex;
-  flex-direction: column;
-  padding: map-get($map: $sizes, $key: spacing) * 2;
-
-  @include breakpoint(513px) {
-    flex-direction: row;
-  }
-
-  &__title {
+    align-items: center;
+    background-color: map-get($map: $colors, $key: site-color);
     color: text-contrast(map-get($map: $colors, $key: site-color));
-    margin: 0;
-    padding: 0;
-  }
-
-  &__nav {
-    width: 100%;
-
-    @include breakpoint(513px) {
-      margin-left: auto;
-      flex-basis: 50%;
-    }
-
-    @include breakpoint(670px) {
-      flex-basis: 40%;
-    }
-
-    a {
-      color: text-contrast(map-get($map: $colors, $key: site-color));
-      border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
-    }
-  }
-
-  &__menu {
     display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-  }
+    flex-direction: column;
+    padding: map-get($map: $sizes, $key: spacing) * 2;
+    @include breakpoint(513px) {
+        flex-direction: row;
+    }
+
+    &__title {
+        color: text-contrast(map-get($map: $colors, $key: site-color));
+        margin: 0;
+        padding: 0;
+    }
+
+    &__nav {
+        width: 100%;
+        @include breakpoint(513px) {
+            margin-left: auto;
+            flex-basis: 50%;
+        }
+        @include breakpoint(670px) {
+            flex-basis: 40%;
+        }
+
+        a {
+            color: text-contrast(map-get($map: $colors, $key: site-color));
+            border-bottom: 1px dotted
+                text-contrast(map-get($map: $colors, $key: site-color));
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
 }
