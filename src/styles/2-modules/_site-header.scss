@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     padding: map-get($map: $sizes, $key: spacing) * 2;
+
     @include breakpoint(513px) {
         flex-direction: row;
     }
@@ -17,10 +18,12 @@
 
     &__nav {
         width: 100%;
+
         @include breakpoint(513px) {
             margin-left: auto;
             flex-basis: 50%;
         }
+
         @include breakpoint(670px) {
             flex-basis: 40%;
         }
