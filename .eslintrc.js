@@ -1,33 +1,33 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
+    'env': {
+        'browser': true,
+        'commonjs': true,
+        'es6': true,
+        'node': true
     },
-    "extends": "eslint:recommended",
-    "rules": {
-        "indent": [
-            "error",
+    'extends': 'eslint:recommended',
+    'rules': {
+        'indent': [
+            'error',
             4
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
+        'linebreak-style': [
+            'error',
+            'unix'
         ],
-        "quotes": [
-            "error",
-            "single",
-            {"allowTemplateLiterals": true}
+        'quotes': [
+            'error',
+            'single',
+            {'allowTemplateLiterals': true}
         ],
-        "semi": [
-            "error",
-            "always"
+        'semi': [
+            'error',
+            'always'
         ],
-        "space-in-parens": [
-            "error",
-            "always"
+        'space-in-parens': [
+            'error',
+            'always'
         ],
-        "no-console": "off"
+        'no-console': 'off'
     }
 };
