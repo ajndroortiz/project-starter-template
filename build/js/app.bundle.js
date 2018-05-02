@@ -9032,6 +9032,10 @@ var _lib = __webpack_require__(329);
 console.log(_lib.person.name);
 console.log((0, _lib.sayHello)('Alex'));
 
+var Alex = new _lib.Person("Alex", "Ortiz");
+
+console.log(Alex.greeting());
+
 // async function getPosts() {
 //     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
 //     const data = await response.json();
@@ -9050,16 +9054,40 @@ console.log((0, _lib.sayHello)('Alex'));
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 exports.sayHello = sayHello;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var person = exports.person = {
-    name: "John",
-    location: "Miami",
+    name: 'John',
+    location: 'Miami',
     age: 35
 };
 
 function sayHello(name) {
-    return "Hello " + name;
+    return 'Hello ' + name;
 }
+
+var Person = exports.Person = function () {
+    function Person(firstName, lastName) {
+        _classCallCheck(this, Person);
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    _createClass(Person, [{
+        key: 'greeting',
+        value: function greeting() {
+            return "Hi my name is " + this.firstName + " " + this.lastName;
+        }
+    }]);
+
+    return Person;
+}();
 
 /***/ })
 /******/ ]);

@@ -7,3 +7,13 @@ export const person = {
 export function sayHello( name ) {
     return `Hello ${name}`;
 }
+
+export class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    greeting() {
+        return "Hi my name is " + this.firstName + " " + this.lastName;
+    }
+}

@@ -1,7 +1,11 @@
-import { person, sayHello } from './lib';
+import { person, sayHello, Person } from './lib';
 
 console.log( person.name );
 console.log( sayHello( 'Alex' ) );
+
+const Alex = new Person("Alex", "Ortiz");
+
+console.log(Alex.greeting());
 
 // async function getPosts() {
 //     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
