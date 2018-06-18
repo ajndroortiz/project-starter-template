@@ -6,6 +6,7 @@
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
+.idea
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -217,5 +218,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-shrinkwrap.yaml
+# Project Specific
+build

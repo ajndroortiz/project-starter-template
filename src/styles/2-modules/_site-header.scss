@@ -1,4 +1,5 @@
 .site-header {
+<<<<<<< HEAD
     align-items: center;
     background-color: map-get($map: $colors, $key: site-color);
     color: text-contrast(map-get($map: $colors, $key: site-color));
@@ -15,10 +16,26 @@
         margin: 0;
         padding: 0;
     }
+=======
+  align-items: center;
+  background-color: $site-color;
+  color: text-contrast($site-color);
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
 
-    &__nav {
-        width: 100%;
+  @include breakpoint(513px) {
+    flex-direction: row;
+  }
+>>>>>>> updated imagemin task settings
 
+  &__title {
+    color: text-contrast($site-color);
+    margin: 0;
+    padding: 0;
+  }
+
+<<<<<<< HEAD
         @include breakpoint(513px) {
             margin-left: auto;
             flex-basis: 50%;
@@ -32,12 +49,26 @@
             color: text-contrast(map-get($map: $colors, $key: site-color));
             border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
         }
+=======
+  &__nav {
+    width: 100%;
+
+    @include breakpoint(513px) {
+      margin-left: auto;
+      flex-basis: 30%;
+>>>>>>> updated imagemin task settings
     }
 
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
+    a {
+      color: text-contrast($site-color);
+      border-bottom: 1px dotted text-contrast($site-color);
     }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
 }
