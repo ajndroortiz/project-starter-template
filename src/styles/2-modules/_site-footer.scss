@@ -1,41 +1,14 @@
 .site-footer {
-<<<<<<< HEAD
-    background-color: map-get($map: $colors, $key: site-color);
-    color: text-contrast(map-get($map: $colors, $key: white));
-    display: flex;
-    flex-direction: column;
-    padding: map-get($map: $sizes, $key: topandbottom);
-    justify-content: center;
-    margin-top: auto;
-
-    p {
-        text-align: center;
-    }
-
-    &__menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    a {
-        color: text-contrast(map-get($map: $colors, $key: site-color));
-        border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
-    }
-=======
-  background-color: $site-color;
-  color: $white;
+  background-color: map-get($map: $colors, $key: site-color);
+  color: text-contrast(map-get($map: $colors, $key: white));
   display: flex;
   flex-direction: column;
-  padding: $paddingtopbottom;
+  padding: map-get($map: $sizes, $key: topandbottom);
   justify-content: center;
-
-  > p {
+  margin-top: auto;
+  p {
     text-align: center;
   }
-
   &__menu {
     list-style-type: none;
     margin: 0;
@@ -43,5 +16,8 @@
     display: flex;
     justify-content: space-around;
   }
->>>>>>> updated imagemin task settings
+  a {
+    color: text-contrast(map-get($map: $colors, $key: site-color));
+    border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
+  }
 }
