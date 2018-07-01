@@ -7,8 +7,8 @@ const settings = require('./../../settings');
 
 gulp.task('styles', () =>
   gulp
-    .src('./src/styles/style.scss')
+    .src(`${settings.stylingFiles}style.scss`)
     .pipe(sass())
     .pipe(postCSS([prefix, cssNano]))
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest(settings.outputFolder))
 );

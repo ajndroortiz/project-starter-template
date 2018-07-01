@@ -6,19 +6,19 @@ gulp.task('watch', () => {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: './build/',
+      baseDir: settings.outputFolder,
     },
   });
 
-  gulp.watch('./src/content/**/*', () => {
+  gulp.watch(`${settings.contentFiles}**/*`, () => {
     gulp.start('contentMove');
   });
 
-  gulp.watch('./src/js/**/*.js', () => {
+  gulp.watch(`${settings.scriptFiles}**/*.js`, () => {
     gulp.start('jsInject');
   });
 
-  gulp.watch('./src/styles/**/*', () => {
+  gulp.watch(`${settings.stylingFiles}**/*`, () => {
     gulp.start('styleInject');
   });
 
@@ -27,7 +27,7 @@ gulp.task('watch', () => {
   });
 
   gulp.task('styleInject', ['styles'], () =>
-    gulp.src('./build/style.css').pipe(browserSync.stream())
+    gulp.src(`${settings.outputFolder}style.css`).pipe(browserSync.stream())
   );
 
   gulp.task('jsInject', ['scripts'], () => {

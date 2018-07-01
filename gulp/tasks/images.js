@@ -4,7 +4,7 @@ const settings = require('./../../settings');
 
 gulp.task('images', () =>
   gulp
-    .src('./src/images/*')
+    .src(`${settings.imageFiles}*`)
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -15,5 +15,5 @@ gulp.task('images', () =>
         }),
       ])
     )
-    .pipe(gulp.dest('./build/imgs/'))
+    .pipe(gulp.dest(`${settings.outputFolder}imgs`))
 );
