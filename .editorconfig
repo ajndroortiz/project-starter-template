@@ -6,8 +6,11 @@ insert_final_newline = true
 charset = utf-8
 indent_style = space
 
-[*.{py,yml,scss,css,js}]
+[*.{py,yml}]
 indent_size = 2
 
-[*.{php,html}]
+[*.{php,html,scss,css,js}]
 indent_size = 4
+
+[*.php]
+indent_style = tab

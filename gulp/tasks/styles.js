@@ -6,9 +6,9 @@ const prefix = require('autoprefixer');
 const settings = require('./../../settings');
 
 gulp.task('styles', () =>
-  gulp
-    .src(`${settings.stylingFiles}style.scss`)
-    .pipe(sass())
-    .pipe(postCSS([prefix, cssNano]))
-    .pipe(gulp.dest(settings.outputFolder))
+    gulp
+        .src(`${settings.stylingFiles}style.scss`)
+        .pipe(sass())
+        .pipe(postCSS([prefix, cssNano]))
+        .pipe(gulp.dest(settings.outputFolder))
 );
