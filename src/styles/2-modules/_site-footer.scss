@@ -1,26 +1,23 @@
 .site-footer {
-    background-color: map-get($map: $colors, $key: site-color);
-    color: text-contrast(map-get($map: $colors, $key: white));
+  background-color: map-get($map: $colors, $key: site-color);
+  color: text-contrast(map-get($map: $colors, $key: white));
+  display: flex;
+  flex-direction: column;
+  padding: map-get($map: $sizes, $key: topandbottom);
+  justify-content: center;
+  margin-top: auto;
+  p {
+    text-align: center;
+  }
+  &__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    padding: map-get($map: $sizes, $key: topandbottom);
-    justify-content: center;
-    margin-top: auto;
-
-    p {
-        text-align: center;
-    }
-
-    &__menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    a {
-        color: text-contrast(map-get($map: $colors, $key: site-color));
-        border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
-    }
+    justify-content: space-around;
+  }
+  a {
+    color: text-contrast(map-get($map: $colors, $key: site-color));
+    border-bottom: 1px dotted text-contrast(map-get($map: $colors, $key: site-color));
+  }
 }
