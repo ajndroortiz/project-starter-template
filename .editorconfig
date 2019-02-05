@@ -4,13 +4,11 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 charset = utf-8
-indent_style = space
 
-[*.{py,yml}]
+[*.{py,yml,scss,sass,css,js,json}]
+indent_style = space
 indent_size = 2
 
-[*.{php,html,scss,css,js}]
-indent_size = 4
-
-[*.php]
+[*.{php,html}]
 indent_style = tab
+indent_size = 4
